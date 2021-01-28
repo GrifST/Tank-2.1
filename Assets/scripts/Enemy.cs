@@ -7,14 +7,18 @@ public class Enemy : MonoBehaviour
     public float Speed;
     public float StopDist;
     public float RetreatDist;
-    public Transform Player;
+   public Transform Player;
     private Rigidbody2D rb;
     
    
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        Player = GameObject.FindGameObjectWithTag("Player").transform;
+        
+        //тэги это прохо. ты можешь огрести кучу проблем просто из за неверного имени.
+        //рекомендую использовать поиск по типу компонента
+        Player = FindObjectOfType<Tank>().transform;
+       //Player = GameObject.FindGameObjectWithTag("Player").transform;
        
     }
 
@@ -28,15 +32,14 @@ public class Enemy : MonoBehaviour
 
         if (dist > StopDist)
         {
-
             transform.position = Vector2.MoveTowards(transform.position, Player.position, Speed * Time.deltaTime);
         }
-        else if (dist < StopDist && (Vector2.Distance(transform.position, Player.position) > RetreatDist))
+        else if (dist < StopDist && (dist > RetreatDist))
         {
             transform.position = Player.position;
         }
         else if (dist < RetreatDist)
-        {
+        { 
             transform.position = Vector2.MoveTowards(transform.position, Player.position, -Speed * Time.deltaTime);
         }
     }

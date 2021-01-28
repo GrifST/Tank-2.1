@@ -6314,13 +6314,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1556508231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e3d7b7d57aaadc43bf7a04c572e3a2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bae1e81b79d93848b51fa876a80853d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  StopDist: 5
+  StopDist: 6
   RetreatDist: 10
-  Player: {fileID: 975216187}
+  Player: {fileID: 976173474}
 --- !u!50 &1556508234
 Rigidbody2D:
   serializedVersion: 4
@@ -6333,7 +6333,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -17394,7 +17394,7 @@ GameObject:
   - component: {fileID: 1990498917}
   m_Layer: 0
   m_Name: Hull
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
