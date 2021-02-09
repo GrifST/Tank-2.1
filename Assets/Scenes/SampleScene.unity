@@ -2232,6 +2232,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &534640504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534640505}
+  m_Layer: 0
+  m_Name: Firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &534640505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534640504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1945777449}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &545903959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,8 +2880,6 @@ GameObject:
   m_Component:
   - component: {fileID: 628904578}
   - component: {fileID: 628904579}
-  - component: {fileID: 628904580}
-  - component: {fileID: 628904581}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -2924,40 +2952,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &628904580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628904577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7767ef0e0ae1d924e8cc5b6b1c26ae00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420031}
---- !u!114 &628904581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628904577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a633be0a35fe4143b0081dab890a2ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Firepoint: {fileID: 1231795643}
-  PlazmPrefab: {fileID: 1144965387154859905, guid: 6a851992ed139784594a97e8e5dad803,
-    type: 3}
-  ShellPrefab: {fileID: 3539911662407433900, guid: 06901afac231b984e9ba966dad3d4108,
-    type: 3}
-  DpsPlasm: 0.5
-  DpsShell: 0.9
-  Plazmforce: 20
-  Shellforce: 20
 --- !u!1 &651491545
 GameObject:
   m_ObjectHideFlags: 0
@@ -3900,8 +3894,9 @@ GameObject:
   - component: {fileID: 976173474}
   - component: {fileID: 976173475}
   - component: {fileID: 976173476}
+  - component: {fileID: 976173477}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: Tower1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3982,10 +3977,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 976173473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7767ef0e0ae1d924e8cc5b6b1c26ae00, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bc433e7e4b741544a4bd7957dd60d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedRotation: 1
+  SpeedTorward: 1
+  HP: 1
+  nameTank: 
   cam: {fileID: 519420031}
+--- !u!114 &976173477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976173473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a633be0a35fe4143b0081dab890a2ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Firepoint: {fileID: 1231795643}
+  ProjectilePrefab: {fileID: 1144965387154859905, guid: 6a851992ed139784594a97e8e5dad803,
+    type: 3}
 --- !u!1 &1001414085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6318,8 +6332,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  StopDist: 6
-  RetreatDist: 10
+  StopDist: 10
+  RetreatDist: 15
   Player: {fileID: 976173474}
 --- !u!50 &1556508234
 Rigidbody2D:
@@ -17110,6 +17124,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1945777449}
   - component: {fileID: 1945777450}
+  - component: {fileID: 1945777452}
+  - component: {fileID: 1945777451}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -17130,6 +17146,7 @@ Transform:
   m_Children:
   - {fileID: 1242043193}
   - {fileID: 1884860067}
+  - {fileID: 534640505}
   m_Father: {fileID: 1126494838}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17183,6 +17200,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1945777451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945777448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a633be0a35fe4143b0081dab890a2ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Firepoint: {fileID: 534640505}
+  ProjectilePrefab: {fileID: 3539911662407433900, guid: 06901afac231b984e9ba966dad3d4108,
+    type: 3}
+--- !u!114 &1945777452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945777448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab09dfba439308e4f85ad6c3466620c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeedRotation: 1
+  SpeedTorward: 1
+  HP: 1
+  _shoting: {fileID: 1945777451}
+  target: {fileID: 1990498913}
+  angle: 360
+  reload: 10
 --- !u!1 &1948564530
 GameObject:
   m_ObjectHideFlags: 0
@@ -17430,6 +17481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed3caab90a602945802de9e80f48e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _shoting: {fileID: 976173477}
   trackLeft: {fileID: 1948564532}
   trackRight: {fileID: 1193811002}
   keyMoveForward: w
@@ -17527,7 +17579,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
