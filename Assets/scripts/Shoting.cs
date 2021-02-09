@@ -5,55 +5,40 @@ using UnityEngine;
 
 public class Shoting : MonoBehaviour
 {
-
-
     public Transform Firepoint;
-    public GameObject PlazmPrefab;
-    public GameObject ShellPrefab;
-    public float DpsPlasm = 0.5f;
-    public float DpsShell = 0.9f;
-    public float Plazmforce = 20f;
-    public float Shellforce = 20f;
-    private float _rateofspeed;
-    void Update()
+    public GameObject ProjectilePrefab;
+    private float _rateFireoffspeed;
+    private float timer = 0f;
+    private bool acessFire;
+
+    private void Start()
     {
-      
-
-        if (_rateofspeed <= DpsPlasm)
-        {
-            _rateofspeed += Time.deltaTime;
-        }
-   
-        if (Input.GetMouseButton(0) & _rateofspeed > DpsPlasm)
-        {
-            _rateofspeed = 0;
-
-            Shoot();
-        }
-
-        if (_rateofspeed <= DpsShell)
-        {
-            _rateofspeed += Time.deltaTime;
-        }
-
-        if (Input.GetMouseButton(1) & _rateofspeed > DpsShell)
-        {
-            _rateofspeed = 0;
-
-            Shoot2();
-        }
-
+        GetRateFireAmunity();
     }
-    void Shoot()
+
+    private void GetRateFireAmunity()
     {
-        GameObject Plazm = Instantiate(PlazmPrefab, Firepoint.position, Firepoint.rotation);
-        Rigidbody2D rb = Plazm.GetComponent<Rigidbody2D>();
-        rb.AddForce(Firepoint.up * Plazmforce, ForceMode2D.Impulse);
+        _rateFireoffspeed = ProjectilePrefab.GetComponent<Projectiles>().RateFire;
     }
-    void Shoot2()
+
+    private void Update()
     {
-        GameObject Shell = Instantiate(ShellPrefab, Firepoint.position, Firepoint.rotation);
-        Rigidbody2D rb = Shell.GetComponent<Rigidbody2D>();
-        rb.AddForce(Firepoint.up * Shellforce, ForceMode2D.Impulse);
+        timer += Time.deltaTime;
+        if (timer > _rateFireoffspeed)
+        {
+            acessFire = true;
+        }
+    }
+
+    public void Shoot()
+    {
+        if (acessFire)
+        {
+            GameObject Projectile = Instantiate(ProjectilePrefab, Firepoint.position, Firepoint.rotation);
+            Rigidbody2D rb = Projectile.GetComponent<Rigidbody2D>();
+            rb.AddForce(Firepoint.up * ProjectilePrefab.GetComponent<Projectiles>().Speed, ForceMode2D.Impulse);
+            acessFire = false;
+            timer = 0;
+        }
     }
 }

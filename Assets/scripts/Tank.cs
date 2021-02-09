@@ -12,7 +12,7 @@ public class Tank : MonoBehaviour
     /////*******************************************/////
     /////                   VARS                    /////  
     /////*******************************************/////
-
+    [SerializeField] private Shoting _shoting;
     public Track trackLeft;
     public Track trackRight;
 
@@ -44,6 +44,10 @@ public class Tank : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButton(0))
+        {
+            _shoting.Shoot();
+        }
 
         rotateLeft = (Input.GetKeyDown(keyRotateLeft)) ? true : rotateLeft;
         rotateLeft = (Input.GetKeyUp(keyRotateLeft)) ? false : rotateLeft;
