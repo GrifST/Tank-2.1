@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class HelthControl : MonoBehaviour
 {
-    [Header("Здоровье и Щиты")]
-    [SerializeField] private float _maxHelthPoint = 100;
+    [Header("Здоровье и Щиты")] [SerializeField]
+    private float _maxHelthPoint = 100;
+
     [SerializeField] private float _currentHP;
     [SerializeField] private float _maxShieldPoint;
     [SerializeField] private float _currentSP;
@@ -13,30 +14,27 @@ public class HelthControl : MonoBehaviour
 
     private void Start()
     {
-        _maxShieldPoint = _currentSP;
-        _maxHelthPoint = _currentHP;
-
+        _currentSP = _maxShieldPoint;
+        _currentHP = _maxHelthPoint;
     }
+
     void Update()
     {
-
     }
-    
-   public void TakeDamage(float damage)
+
+    public void TakeDamage(float damage)
     {
-          _currentSP -= damage;
+        _currentSP -= damage;
 
-        if(_currentSP <= 0)
+        if (_currentSP <= 0)
         {
-              _currentHP -= damage;
+            _currentHP -= damage;
 
-            if(_currentHP <= 0)
+
+            if (_currentHP <= 0)
             {
                 Destroy(gameObject);
             }
         }
     }
-
-
-
 }

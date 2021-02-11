@@ -4,8 +4,10 @@ public class Projectiles : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] private float rateFire;
+    [SerializeField] private float damage;
     public GameObject Hiteffect;
-    public float Damage = 10;
+    
+
     public float Speed
     {
         get => speed;
@@ -21,18 +23,15 @@ public class Projectiles : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        var temp = collision.collider.GetComponent<HelthControl>();
+        if (temp!=null)
+        {
+         temp.TakeDamage(damage);   
+        }
+
         GameObject effect = Instantiate(Hiteffect, transform.position, Quaternion.identity);
         Destroy(effect, 1f);
         Destroy(gameObject);
     }
 
-   /* private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Enemy enemy = collision.
-
-        if(enemy != null)
-        {
-            enemy.TakeDamage(Damage);
-        }*/
-    }
 }

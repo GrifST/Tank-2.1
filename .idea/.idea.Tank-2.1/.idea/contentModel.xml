@@ -10,7 +10,7 @@
           <e p="BaseTank (1).cs" t="Include" />
           <e p="Camcontrol.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
-          <e p="Gunmove.cs" t="Include" />
+          <e p="HelthControl.cs" t="Include" />
           <e p="Projectiles.cs" t="Include" />
           <e p="RotationGunEnemy.cs" t="Include" />
           <e p="RotationGunPlayer.cs" t="Include" />
