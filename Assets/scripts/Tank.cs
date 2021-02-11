@@ -1,46 +1,40 @@
-﻿/* .-------.                             .--.    .-------.     .--.            .--.     .--.        
-   |       |--.--.--------.-----.-----.--|  |    |_     _|--.--|  |_.-----.----|__|---.-|  |-----.
-   |   -   |_   _|        |  _  |     |  _  |      |   | |  |  |   _|  _  |   _|  |  _  |  |__ --|
-   |_______|__.__|__|__|__|_____|__|__|_____|      |___| |_____|____|_____|__| |__|___._|__|_____|
-   © OXMOND / www.oxmond.com */
-
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Tank : MonoBehaviour
 {
 
-    /////*******************************************/////
-    /////                   VARS                    /////  
-    /////*******************************************/////
-    [SerializeField] private Shoting _shoting;
-    public Track trackLeft;
-    public Track trackRight;
-
+    [Header("Управление Танком")]
     public string keyMoveForward;
     public string keyMoveReverse;
     public string keyRotateRight;
     public string keyRotateLeft;
 
-    bool moveForward = false;
-    bool moveReverse = false;
-    public float moveSpeed = 0f;
-    float moveSpeedReverse = 0f;
+    [Header("Ссылка на пушку")]
+    [SerializeField] private Shoting _shoting; 
+
+    [Header("Скорость танка")]
     public float moveAcceleration = 0.1f;
-    float moveDeceleration = 0.20f;
     public float moveSpeedMax = 2.5f;
+    // Скрытые скоростные характеристики
+    private float moveSpeed = 0f;
+    float moveSpeedReverse = 0f;
+    float moveDeceleration = 0.20f;
 
-    bool rotateRight = false;
-    bool rotateLeft = false;
-    float rotateSpeedRight = 0f;
-    float rotateSpeedLeft = 0f;
-    float rotateAcceleration = 4f;
-    float rotateDeceleration = 10f;
-    float rotateSpeedMax = 130f;
+    // Скрытые характеристики поворота танка
+    private float rotateSpeedRight = 0f;
+    private float rotateSpeedLeft = 0f;
+    private float rotateAcceleration = 4f;
+    private float rotateDeceleration = 10f;
+    private float rotateSpeedMax = 130f;
 
+    [Header("Траки")]
+    public Track trackLeft;
+    public Track trackRight;
 
-    /////*******************************************/////
-    /////                 UPDATE                    /////  
-    /////*******************************************/////
+    private bool moveForward = false;
+    private bool moveReverse = false;
+    private bool rotateRight = false;
+    private bool rotateLeft = false;
 
     void Update()
     {
@@ -109,7 +103,7 @@ public class Tank : MonoBehaviour
     }
 
     /////*******************************************/////
-    /////                METHODS                    /////  
+    /////                Методы                     /////  
     /////*******************************************/////
 
     void trackStart()

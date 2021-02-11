@@ -5,9 +5,10 @@ using UnityEngine;
     {
         [SerializeField] private Shoting _shoting;
         [SerializeField] Transform target;
-        public float angle = 60;
-        private float timer = 0f;
-        public float reload = 3;
+        [SerializeField] private float angle = 360;
+        public float timer = 0f;
+        public float _rateFireoffspeed = 3f;
+        private bool acessFire;
     private void Start()
         {
             target = FindObjectOfType<RotationGunPlayer>().transform;
@@ -30,13 +31,23 @@ using UnityEngine;
 
         if (Vector3.Angle(transform.forward, target.position - transform.position) <= angle)
         {
+
             
+
             timer += Time.deltaTime;
-            if (timer > reload)
+            if (timer >= _rateFireoffspeed)
             {
-                _shoting.Shoot();
                 timer = 0;
+                acessFire = true;
+
+                if (acessFire)
+                {
+
+                    _shoting.Shoot();
+
+                }
             }
+           
         }
 
     }
