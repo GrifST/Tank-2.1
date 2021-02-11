@@ -5,7 +5,7 @@ public class Projectiles : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] private float rateFire;
     public GameObject Hiteffect;
-
+    public float Damage = 10;
     public float Speed
     {
         get => speed;
@@ -26,4 +26,13 @@ public class Projectiles : MonoBehaviour
         Destroy(gameObject);
     }
 
+   /* private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Enemy enemy = collision.
+
+        if(enemy != null)
+        {
+            enemy.TakeDamage(Damage);
+        }*/
+    }
 }

@@ -4000,7 +4000,7 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 3539911662407433900, guid: 06901afac231b984e9ba966dad3d4108,
     type: 3}
   _rateofspeed: 0
-  Settime: 0.1
+  Settime: 1
   timer: 0
 --- !u!1 &1001414085
 GameObject:
