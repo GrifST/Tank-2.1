@@ -16,10 +16,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/Shoting.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/Tank.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/RotationGunEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/HelthControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Projectiles.cs" />
       </list>
     </option>
   </component>
@@ -63,6 +64,8 @@
       <option name="presentableId" value="Default" />
       <updated>1612890422731</updated>
       <workItem from="1612890426088" duration="2066000" />
+      <workItem from="1613041998434" duration="276000" />
+      <workItem from="1613042412112" duration="584000" />
     </task>
     <servers />
   </component>
