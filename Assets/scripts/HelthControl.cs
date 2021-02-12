@@ -17,7 +17,12 @@ public class HelthControl : MonoBehaviour
     public StatSetter Setter
     {
         get => _statSetter;
-        set => _statSetter = value;
+        set
+        {
+            _statSetter = value;
+            _statSetter.SetHP(_maxHelthPoint,_maxHelthPoint);
+            _statSetter.SetSP(_maxShieldPoint,_maxShieldPoint);
+        }
     }
 
     private void Start()
@@ -33,7 +38,6 @@ public class HelthControl : MonoBehaviour
         Setter.SetSP(_currentSP, _maxShieldPoint);
         if (_currentSP <= 0)
         {
-          
             _currentHP -= damage;
             Setter.SetHP(_currentHP, _maxHelthPoint);
 
