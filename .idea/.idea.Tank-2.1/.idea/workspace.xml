@@ -11,16 +11,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/06/a79d3dc0/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/scripts/RotationGunEnemy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/scripts/Shoting.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/Tank.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/RotationGunEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/HelthControl.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/Projectiles.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/StatSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Tank.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Camcontrol.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/RotationGunEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/RotationGunPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/HelthControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -66,6 +72,8 @@
       <workItem from="1612890426088" duration="2066000" />
       <workItem from="1613041998434" duration="276000" />
       <workItem from="1613042412112" duration="584000" />
+      <workItem from="1613144231410" duration="1099000" />
+      <workItem from="1613145371111" duration="4535000" />
     </task>
     <servers />
   </component>

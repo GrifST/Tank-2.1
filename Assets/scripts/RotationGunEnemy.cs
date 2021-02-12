@@ -19,6 +19,7 @@ using UnityEngine;
         private void Update()
         {
             
+            if(target==null) return;
             base.RotationOnTarget(target.position,SpeedTorward);
             GetAngleAttack();
            

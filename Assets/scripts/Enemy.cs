@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     
     void Update()
     {
+        if(Player==null) return;
         Vector3 direction = Player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;

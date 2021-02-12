@@ -5,16 +5,17 @@ using UnityEngine;
     public class RotationGunPlayer: BaseTank
     {
         private Vector2 mousePos;
-        [SerializeField] private Camera cam;
-    
+        private Camera cam;
 
-   
+        private void Start()
+        {
+            cam=Camera.main;
+        }
+
         private void Update()
         {
             mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             base.RotationOnTarget(mousePos,SpeedRotation);
-
-        
         }
 
       

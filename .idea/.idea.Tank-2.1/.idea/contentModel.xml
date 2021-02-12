@@ -6,8 +6,9 @@
     <e p="E:\git\Enginea\Unity\Tank-2.1" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="GameManager.cs" t="Include" />
         <e p="scripts" t="Include">
-          <e p="BaseTank (1).cs" t="Include" />
+          <e p="BaseTank.cs" t="Include" />
           <e p="Camcontrol.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="HelthControl.cs" t="Include" />
@@ -15,8 +16,21 @@
           <e p="RotationGunEnemy.cs" t="Include" />
           <e p="RotationGunPlayer.cs" t="Include" />
           <e p="Shoting.cs" t="Include" />
+          <e p="StatSetter.cs" t="Include" />
           <e p="Tank.cs" t="Include" />
           <e p="Track.cs" t="Include" />
+        </e>
+        <e p="SimplePixelUI" t="Include">
+          <e p="fonts" t="Include">
+            <e p="Font1" t="Include">
+              <e p="license.txt" t="Include" />
+              <e p="readme.txt" t="Include" />
+            </e>
+            <e p="Font2" t="Include">
+              <e p="license.txt" t="Include" />
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

@@ -2,6 +2,7 @@
 
 public class Tank : MonoBehaviour
 {
+    [SerializeField] private GameObject body;
 
     [Header("Управление Танком")]
     public string keyMoveForward;
@@ -53,7 +54,7 @@ public class Tank : MonoBehaviour
         {
             rotateSpeedLeft = (rotateSpeedLeft > 0) ? rotateSpeedLeft - rotateDeceleration : 0;
         }
-        transform.Rotate(0f, 0f, rotateSpeedLeft * Time.deltaTime);
+        body.transform.Rotate(0f, 0f, rotateSpeedLeft * Time.deltaTime);
 
         rotateRight = (Input.GetKeyDown(keyRotateRight)) ? true : rotateRight;
         rotateRight = (Input.GetKeyUp(keyRotateRight)) ? false : rotateRight;
@@ -65,7 +66,7 @@ public class Tank : MonoBehaviour
         {
             rotateSpeedRight = (rotateSpeedRight > 0) ? rotateSpeedRight - rotateDeceleration : 0;
         }
-        transform.Rotate(0f, 0f, rotateSpeedRight * Time.deltaTime * -1f);
+        body.transform.Rotate(0f, 0f, rotateSpeedRight * Time.deltaTime * -1f);
 
         moveForward = (Input.GetKeyDown(keyMoveForward)) ? true : moveForward;
         moveForward = (Input.GetKeyUp(keyMoveForward)) ? false : moveForward;
@@ -77,7 +78,7 @@ public class Tank : MonoBehaviour
         {
             moveSpeed = (moveSpeed > 0) ? moveSpeed - moveDeceleration : 0;
         }
-        transform.Translate(0f, moveSpeed * Time.deltaTime, 0f);
+        body.transform.Translate(0f, moveSpeed * Time.deltaTime, 0f);
 
         moveReverse = (Input.GetKeyDown(keyMoveReverse)) ? true : moveReverse;
         moveReverse = (Input.GetKeyUp(keyMoveReverse)) ? false : moveReverse;
@@ -89,7 +90,7 @@ public class Tank : MonoBehaviour
         {
             moveSpeedReverse = (moveSpeedReverse > 0) ? moveSpeedReverse - moveDeceleration : 0;
         }
-        transform.Translate(0f, moveSpeedReverse * Time.deltaTime * -1f, 0f);
+        body.transform.Translate(0f, moveSpeedReverse * Time.deltaTime * -1f, 0f);
 
         if (moveForward | moveReverse | rotateRight | rotateLeft)
         {
