@@ -30,7 +30,7 @@ public class HelthControl : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _currentSP -= damage;
-
+        Setter.SetSP(_currentSP, _maxShieldPoint);
         if (_currentSP <= 0)
         {
           
