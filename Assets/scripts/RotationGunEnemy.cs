@@ -9,6 +9,8 @@ using UnityEngine;
         public float timer = 0f;
         public float _rateFireoffspeed = 3f;
         private bool acessFire;
+        
+        
     private void Start()
         {
             target = FindObjectOfType<RotationGunPlayer>().transform;
@@ -44,7 +46,7 @@ using UnityEngine;
                 {
 
                     _shoting.Shoot();
-
+                    
                 }
             }
            
