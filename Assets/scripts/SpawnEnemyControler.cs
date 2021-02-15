@@ -12,29 +12,24 @@ public class SpawnEnemyControler : MonoBehaviour
     {
         EnemyGo();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
 
     private void EnemyGo()
     {
-        Instantiate(prefEnemy).transform.position = spawnEnemy.position;
+        EnemyCreate(prefEnemy).transform.position = spawnEnemy.transform.position;
+
     }
     private GameObject EnemyCreate(GameObject pref)
     {
         var temp = Instantiate(pref);
-        temp.GetComponentInChildren<HelthControl>().Setter = _statSetterEnemy;
-        temp.GetComponentInChildren<HelthControl>().OnDead += OnEnemyDead;
+        temp.GetComponent<HelthControl>().Setter = _statSetterEnemy;
+        temp.GetComponent<HelthControl>().OnDead += OnEnemyDead;
         return temp;
     }
     private void OnEnemyDead(GameObject Enemy)
     {
         Enemy.GetComponentInChildren<HelthControl>().OnDead -= OnEnemyDead;
-        Destroy(prefEnemy);
+        Destroy(Enemy);
         EnemyGo();
     }
 }

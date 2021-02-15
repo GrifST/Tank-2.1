@@ -27,6 +27,7 @@
         <option value="$PROJECT_DIR$/Assets/scripts/RotationGunPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/HelthControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/SpawnEnemyControler.cs" />
       </list>
     </option>
   </component>
@@ -76,6 +77,7 @@
       <workItem from="1613145371111" duration="4535000" />
       <workItem from="1613158218965" duration="482000" />
       <workItem from="1613158718504" duration="589000" />
+      <workItem from="1613389715815" duration="755000" />
     </task>
     <servers />
   </component>
