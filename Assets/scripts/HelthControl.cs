@@ -5,8 +5,9 @@ public class HelthControl : MonoBehaviour
 {
     [SerializeField] private GameObject body;
     public Action<GameObject> OnDead;
+    public Action<GameObject> OnEnemyDead;
     [SerializeField] private StatSetter _statSetter;
-
+    [SerializeField] private GameObject Enemy;
     [Header("Здоровье и Щиты")] [SerializeField]
     private float _maxHelthPoint;
 
@@ -51,5 +52,6 @@ public class HelthControl : MonoBehaviour
     private void Sucid()
     {
         OnDead?.Invoke(body);
+        OnEnemyDead?.Invoke(Enemy);
     }
 }

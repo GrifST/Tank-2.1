@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public float RetreatDist;
    public Transform Player;
     private Rigidbody2D rb;
-    
+   
    
     void Start()
     {
@@ -17,15 +17,17 @@ public class Enemy : MonoBehaviour
         
         //тэги это прохо. ты можешь огрести кучу проблем просто из за неверного имени.
         //рекомендую использовать поиск по типу компонента
-        Player = FindObjectOfType<Tank>().transform;
+       
        //Player = GameObject.FindGameObjectWithTag("Player").transform;
        
     }
 
     
-    void Update()
+    void Update()   
     {
-        if(Player==null) return;
+              
+         Player = FindObjectOfType<Tank>().transform;
+       
         Vector3 direction = Player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;

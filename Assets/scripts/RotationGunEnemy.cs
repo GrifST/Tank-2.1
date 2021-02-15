@@ -13,14 +13,14 @@ using UnityEngine;
         
     private void Start()
         {
-            target = FindObjectOfType<RotationGunPlayer>().transform;
+           
         }
 
         private void Update()
         {
-            
-            if(target==null) return;
-            base.RotationOnTarget(target.position,SpeedTorward);
+
+        target = FindObjectOfType<RotationGunPlayer>().transform;
+        base.RotationOnTarget(target.position,SpeedTorward);
             GetAngleAttack();
            
 
