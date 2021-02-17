@@ -233,7 +233,7 @@ MonoBehaviour:
   SpeedTorward: 1
   HP: 0
   _shoting: {fileID: 470590200386596290}
-  target: {fileID: 0}
+  target: {fileID: 8592802548404942171, guid: 40673af392b83a44893abee64a6e4bd8, type: 3}
   angle: 360
   timer: 0
   _rateFireoffspeed: 1.5
@@ -489,7 +489,9 @@ MonoBehaviour:
   Speed: 5
   StopDist: 10
   RetreatDist: 15
-  Player: {fileID: 0}
+  Player: {fileID: 8592802548404942171, guid: 40673af392b83a44893abee64a6e4bd8, type: 3}
+  searchTimer: 0
+  setTimer: 0
 --- !u!114 &470590201176979111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,8 +504,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52310833e97b9e14393c6eea09225cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 470590201176979118}
+  player: {fileID: 0}
   _statSetter: {fileID: 0}
+  Enemy: {fileID: 0}
   _maxHelthPoint: 20
   _maxShieldPoint: 20
 --- !u!61 &470590201176979108

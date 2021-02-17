@@ -7,43 +7,60 @@ public class Enemy : MonoBehaviour
     public float Speed;
     public float StopDist;
     public float RetreatDist;
-   public Transform Player;
+    public Transform Player;
     private Rigidbody2D rb;
-   
-   
+    [SerializeField] private float searchTimer;
+    [SerializeField] private float setTimer;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        
+
         //тэги это прохо. ты можешь огрести кучу проблем просто из за неверного имени.
         //рекомендую использовать поиск по типу компонента
-       
-       //Player = GameObject.FindGameObjectWithTag("Player").transform;
-       
+
+        //Player = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
-    
-    void Update()   
-    {
-              
-         Player = FindObjectOfType<Tank>().transform;
-       
-        Vector3 direction = Player.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
-        var dist = Vector2.Distance(transform.position, Player.position);
 
-        if (dist > StopDist)
+    void Update()
+    {
+
+       var Player = FindObjectOfType<Tank>();
+
+        searchTimer += Time.deltaTime;
+        if (searchTimer > setTimer && Player != null)
         {
-            transform.position = Vector2.MoveTowards(transform.position, Player.position, Speed * Time.deltaTime);
+           
+            SearchPlayer();
         }
-        else if (dist < StopDist && (dist > RetreatDist))
-        {
-            transform.position = Player.position;
-        }
-        else if (dist < RetreatDist)
-        { 
-            transform.position = Vector2.MoveTowards(transform.position, Player.position, -Speed * Time.deltaTime);
-        }
+
+    }
+
+    private  void SearchPlayer()
+    {
+       
+            
+
+            Vector3 direction = Player.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            rb.rotation = angle;
+            var dist = Vector2.Distance(transform.position, Player.position);
+
+            if (dist > StopDist)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Player.position, Speed * Time.deltaTime);
+            }
+            else if (dist < StopDist && (dist > RetreatDist))
+            {
+                transform.position = Player.position;
+            }
+            else if (dist < RetreatDist)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Player.position, -Speed * Time.deltaTime);
+            }
+        
+        searchTimer = 0;
     }
 }

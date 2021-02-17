@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class HelthControl : MonoBehaviour
 {
-    [SerializeField] private GameObject body;
+    [SerializeField] private GameObject player;
     public Action<GameObject> OnDead;
     public Action<GameObject> OnEnemyDead;
     [SerializeField] private StatSetter _statSetter;
@@ -51,7 +51,7 @@ public class HelthControl : MonoBehaviour
 
     private void Sucid()
     {
-        OnDead?.Invoke(body);
+        OnDead?.Invoke(player);
         OnEnemyDead?.Invoke(Enemy);
     }
 }

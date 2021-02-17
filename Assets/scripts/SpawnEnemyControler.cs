@@ -28,7 +28,7 @@ public class SpawnEnemyControler : MonoBehaviour
     }
     private void OnEnemyDead(GameObject Enemy)
     {
-        Enemy.GetComponentInChildren<HelthControl>().OnDead -= OnEnemyDead;
+        Enemy.GetComponent<HelthControl>().OnDead -= OnEnemyDead;
         Destroy(Enemy);
         EnemyGo();
     }
