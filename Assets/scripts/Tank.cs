@@ -36,7 +36,14 @@ public class Tank : MonoBehaviour
     private bool moveReverse = false;
     private bool rotateRight = false;
     private bool rotateLeft = false;
+    
+    
 
+    private void Start()
+    {
+        
+        
+    }
     void Update()
     {
         if (Input.GetMouseButton(0))
@@ -118,5 +125,5 @@ public class Tank : MonoBehaviour
         trackLeft.animator.SetBool("IsMoving", false);
         trackRight.animator.SetBool("IsMoving", false);
     }
-
+   
 }

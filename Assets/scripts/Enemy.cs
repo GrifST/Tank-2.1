@@ -9,8 +9,8 @@ public class Enemy : MonoBehaviour
     public float RetreatDist;
     public Transform Player;
     private Rigidbody2D rb;
-    [SerializeField] private float searchTimer;
-    [SerializeField] private float setTimer;
+   [SerializeField] private float searchTimer;
+   [SerializeField] private float setTimer = 10f;
 
     void Start()
     {
@@ -26,24 +26,18 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-
-       var Player = FindObjectOfType<Tank>();
-
-        searchTimer += Time.deltaTime;
-        if (searchTimer > setTimer && Player != null)
+        SearchPlayer();
+       
+       if(searchTimer < setTimer)
         {
-           
-            SearchPlayer();
+            var Player = FindObjectOfType<RotationGunPlayer>();
         }
-
     }
 
     private  void SearchPlayer()
     {
        
-            
-
-            Vector3 direction = Player.position - transform.position;
+        Vector3 direction = Player.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             rb.rotation = angle;
             var dist = Vector2.Distance(transform.position, Player.position);
@@ -60,7 +54,5 @@ public class Enemy : MonoBehaviour
             {
                 transform.position = Vector2.MoveTowards(transform.position, Player.position, -Speed * Time.deltaTime);
             }
-        
-        searchTimer = 0;
     }
 }

@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52310833e97b9e14393c6eea09225cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 470590201176979118}
   _statSetter: {fileID: 0}
   Enemy: {fileID: 0}
   _maxHelthPoint: 20
