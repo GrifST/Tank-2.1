@@ -22,12 +22,12 @@
         <option value="$PROJECT_DIR$/Assets/scripts/StatSetter.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/Tank.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/Camcontrol.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/RotationGunEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/RotationGunPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/HelthControl.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/SpawnEnemyControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -78,6 +78,8 @@
       <workItem from="1613158218965" duration="482000" />
       <workItem from="1613158718504" duration="589000" />
       <workItem from="1613389715815" duration="755000" />
+      <workItem from="1613571515551" duration="76000" />
+      <workItem from="1613571845981" duration="1349000" />
     </task>
     <servers />
   </component>

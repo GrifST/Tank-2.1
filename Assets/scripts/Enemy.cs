@@ -23,14 +23,20 @@ public class Enemy : MonoBehaviour
 
     }
 
-
+   
     void Update()
     {
-        SearchPlayer();
-       
-       if(searchTimer < setTimer)
+        
+        if(searchTimer < setTimer && Player==null)
         {
-            var Player = FindObjectOfType<RotationGunPlayer>();
+             Player = FindObjectOfType<RotationGunPlayer>().transform;
+             searchTimer = setTimer;
+        }
+        searchTimer -= Time.deltaTime;
+        
+        if (Player != null)
+        {
+            SearchPlayer();
         }
     }
 

@@ -491,7 +491,7 @@ MonoBehaviour:
   RetreatDist: 15
   Player: {fileID: 8592802548404942171, guid: 40673af392b83a44893abee64a6e4bd8, type: 3}
   searchTimer: 0
-  setTimer: 0
+  setTimer: 1
 --- !u!114 &470590201176979111
 MonoBehaviour:
   m_ObjectHideFlags: 0
