@@ -8,7 +8,7 @@ public class Camcontrol : MonoBehaviour
 
     private void Update()
     {
-        if(player==null) return;//пендальф
+        if (player == null) return;//пендальф
         transform.position = Vector3.Lerp(transform.position,
             new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z),
             Time.deltaTime * 1f);

@@ -8,11 +8,12 @@ public class SpawnEnemyControler : MonoBehaviour
     [SerializeField] private GameObject prefEnemy;
     [SerializeField] private Transform spawnEnemy;
     [SerializeField] private StatSetter _statSetterEnemy;
+
     void Start()
     {
         EnemyGo();
     }
-    
+
 
     private void EnemyGo()
     {

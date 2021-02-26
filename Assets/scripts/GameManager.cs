@@ -11,12 +11,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int lives;
     [SerializeField] private Text livesUi;
     [SerializeField] private Text gameoverUI;
-
+    [SerializeField] private Button restartButton;
     private void Start()
     {
         GoGoTank();
         gameoverUI.enabled = false;
         livesUi.text = lives.ToString();
+        restartButton.gameObject.SetActive(false);
     }
 
     private void GoGoTank()
@@ -48,6 +49,8 @@ public class GameManager : MonoBehaviour
         if (lives <= 0)
         {
             gameoverUI.enabled = true;
+            restartButton.gameObject.SetActive(true);
         }
     }
+    
 }

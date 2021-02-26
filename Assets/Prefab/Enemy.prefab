@@ -233,7 +233,7 @@ MonoBehaviour:
   SpeedTorward: 1
   HP: 0
   _shoting: {fileID: 470590200386596290}
-  target: {fileID: 8592802548404942171, guid: 40673af392b83a44893abee64a6e4bd8, type: 3}
+  target: {fileID: 0}
   angle: 360
   timer: 0
   _rateFireoffspeed: 1.5
@@ -489,7 +489,7 @@ MonoBehaviour:
   Speed: 5
   StopDist: 10
   RetreatDist: 15
-  Player: {fileID: 8592802548404942171, guid: 40673af392b83a44893abee64a6e4bd8, type: 3}
+  Player: {fileID: 0}
   searchTimer: 0
   setTimer: 1
 --- !u!114 &470590201176979111

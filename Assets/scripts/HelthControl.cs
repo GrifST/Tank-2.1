@@ -8,7 +8,8 @@ public class HelthControl : MonoBehaviour
     public Action<GameObject> OnEnemyDead;
     [SerializeField] private StatSetter _statSetter;
     [SerializeField] private GameObject Enemy;
-    [Header("Здоровье и Щиты")] [SerializeField]
+    [Header("Здоровье и Щиты")]
+    [SerializeField]
     private float _maxHelthPoint;
 
     [SerializeField] private float _maxShieldPoint;
@@ -21,8 +22,8 @@ public class HelthControl : MonoBehaviour
         set
         {
             _statSetter = value;
-            _statSetter.SetHP(_maxHelthPoint,_maxHelthPoint);
-            _statSetter.SetSP(_maxShieldPoint,_maxShieldPoint);
+            _statSetter.SetHP(_maxHelthPoint, _maxHelthPoint);
+            _statSetter.SetSP(_maxShieldPoint, _maxShieldPoint);
         }
     }
 

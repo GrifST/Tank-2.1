@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Tank : MonoBehaviour
 {
-    
+
 
     [Header("Управление Танком")]
     public string keyMoveForward;
@@ -11,7 +12,7 @@ public class Tank : MonoBehaviour
     public string keyRotateLeft;
 
     [Header("Ссылка на пушку")]
-    [SerializeField] private Shoting _shoting; 
+    [SerializeField] private Shoting _shoting;
 
     [Header("Скорость танка")]
     public float moveAcceleration = 0.1f;
@@ -38,11 +39,14 @@ public class Tank : MonoBehaviour
     private bool rotateLeft = false;
     
     
+   
+    
+
 
     private void Start()
     {
-        
-        
+       
+       
     }
     void Update()
     {
@@ -110,9 +114,7 @@ public class Tank : MonoBehaviour
 
     }
 
-    /////*******************************************/////
-    /////                Методы                     /////  
-    /////*******************************************/////
+    // Анимация гусянок
 
     void trackStart()
     {
@@ -125,5 +127,5 @@ public class Tank : MonoBehaviour
         trackLeft.animator.SetBool("IsMoving", false);
         trackRight.animator.SetBool("IsMoving", false);
     }
-   
+
 }

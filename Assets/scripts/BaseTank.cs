@@ -11,7 +11,7 @@ public class BaseTank : MonoBehaviour
 
     protected void RotationOnTarget(Vector2 target, float speed)
     {
-        Vector2 lookDir = target - (Vector2) transform.position;
+        Vector2 lookDir = target - (Vector2)transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         lookDir.Normalize();
         var rot = Quaternion.AngleAxis(angle, Vector3.forward);

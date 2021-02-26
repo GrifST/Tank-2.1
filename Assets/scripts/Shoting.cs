@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shoting : MonoBehaviour
 {
@@ -9,12 +10,14 @@ public class Shoting : MonoBehaviour
     public GameObject ProjectilePrefab;
     public float _rateofspeed;
     public float Settime;
-   [SerializeField] private float timer = 0f;
+    [SerializeField] private float timer = 0f;
     private bool acessFire;
-
+    
+    
     private void Start()
     {
         GetRateFireAmunity();
+       
     }
 
     private void GetRateFireAmunity()
