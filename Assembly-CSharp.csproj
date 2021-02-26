@@ -83,6 +83,7 @@
     <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_Text.cs" />
     <Compile Include="Assets\scripts\BaseTank.cs" />
     <Compile Include="Assets\scripts\Camcontrol.cs" />
+    <Compile Include="Assets\scripts\Croshire.cs" />
     <Compile Include="Assets\scripts\Enemy.cs" />
     <Compile Include="Assets\scripts\GameManager.cs" />
     <Compile Include="Assets\scripts\HelthControl.cs" />

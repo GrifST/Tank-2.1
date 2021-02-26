@@ -3311,7 +3311,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3339,7 +3339,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -3573,7 +3573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d481bf4c256deb34ab181a0d7a5a198f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefPlayer: {fileID: 1869058377030020207, guid: 9a31145cb6ac1d54c92f4ff9c14532ef,
+  prefPlayer: {fileID: 4865664689987588770, guid: faac9a771836bad42a6dfa0adee3f4f5,
     type: 3}
   spawnPlayer: {fileID: 656656617}
   cam: {fileID: 519420030}
@@ -3582,6 +3582,7 @@ MonoBehaviour:
   livesUi: {fileID: 294257896}
   gameoverUI: {fileID: 734630616}
   restartButton: {fileID: 1605696479}
+  croshire: {fileID: 1913315969}
 --- !u!4 &726002181
 Transform:
   m_ObjectHideFlags: 0
@@ -7163,8 +7164,8 @@ RectTransform:
   - {fileID: 1103832550}
   - {fileID: 1989725512}
   - {fileID: 734630615}
-  - {fileID: 1913315964}
   - {fileID: 1605696478}
+  - {fileID: 1913315964}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7529,7 +7530,7 @@ RectTransform:
   m_Children:
   - {fileID: 1058767267}
   m_Father: {fileID: 1529234122}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18317,14 +18318,14 @@ GameObject:
   - component: {fileID: 1913315967}
   - component: {fileID: 1913315966}
   - component: {fileID: 1913315965}
-  - component: {fileID: 1913315968}
+  - component: {fileID: 1913315969}
   m_Layer: 5
   m_Name: Croshire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1913315964
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18340,11 +18341,11 @@ RectTransform:
   - {fileID: 656216946}
   - {fileID: 1332926622}
   m_Father: {fileID: 1529234122}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -514, y: -280}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913315965
@@ -18393,7 +18394,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -18434,7 +18435,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913315963}
   m_CullTransparentMesh: 0
---- !u!114 &1913315968
+--- !u!114 &1913315969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18443,9 +18444,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1913315963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5fc6f1aee9b004fb4d14dd47d1750d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a934460ebc0bee409309e47e2036a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  croshire: {fileID: 1913315965}
 --- !u!1 &1985332621
 GameObject:
   m_ObjectHideFlags: 0
