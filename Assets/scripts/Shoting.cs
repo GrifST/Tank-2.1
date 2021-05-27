@@ -2,29 +2,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shoting : MonoBehaviour
 {
     public Transform Firepoint;
     public GameObject ProjectilePrefab;
-    private float _rateFireoffspeed;
-    private float timer = 0f;
+    public float _rateofspeed;
+    public float Settime;
+    [SerializeField] private float timer = 0f;
     private bool acessFire;
-
+    
+    
     private void Start()
     {
         GetRateFireAmunity();
+       
     }
 
     private void GetRateFireAmunity()
     {
-        _rateFireoffspeed = ProjectilePrefab.GetComponent<Projectiles>().RateFire;
+        _rateofspeed = ProjectilePrefab.GetComponent<Projectiles>().RateFire;
     }
 
     private void Update()
     {
         timer += Time.deltaTime;
-        if (timer > _rateFireoffspeed)
+        if (timer > Settime)
         {
             acessFire = true;
         }

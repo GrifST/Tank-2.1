@@ -1,32 +1,61 @@
 ﻿using System;
 using UnityEngine;
 
-    public class RotationGunEnemy: BaseTank
+public class RotationGunEnemy : BaseTank
+{
+
+    [SerializeField] Shoting _shoting;
+    [SerializeField] Transform target;
+    [SerializeField] private float angle = 360;
+    public float timer = 0f;
+    public float _rateFireoffspeed = 3f;
+    private bool acessFire;
+
+
+    public void SetTarget(Transform target)
     {
-        [SerializeField] private Shoting _shoting;
-        [SerializeField] Transform target;
-       
-       
-        
-    private void Start()
-        {
-            target = FindObjectOfType<RotationGunPlayer>().transform;
-        }
+        this.target = target;
+    }
 
-        private void Update()
-        {
-            
-            base.RotationOnTarget(target.position,SpeedTorward);
-            GetAngleAttack();
-           
 
-        }
+    private void Update()
+    {
 
-        private void GetAngleAttack()
+
+        if (target == null) return;
+        base.RotationOnTarget(target.transform.position, SpeedTorward);
+        GetAngleAttack();
+
+
+    }
+
+    private void GetAngleAttack()
+    {
+        //логика наведения
+        //если угол = угол атаки то 
+        //
+        if (target == null) return;
+        if (Vector3.Angle(transform.forward, target.position - transform.position) <= angle)
         {
-            //логика наведения
-            //если угол = угол атаки то 
-            //shoting.Shot();
+
+
+
+            timer += Time.deltaTime;
+            if (timer >= _rateFireoffspeed)
+            {
+                timer = 0;
+                acessFire = true;
+
+                if (acessFire)
+                {
+
+                    _shoting.Shoot();
+
+                }
+            }
+
         }
 
     }
+
+}
